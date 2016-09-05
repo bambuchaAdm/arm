@@ -4,21 +4,11 @@
 
 const uint8_t bufferSize = 3;
 
-
-int main(){
+int main(void){
 	initRobotBase();
-	Servo_Power_And_Start();
-
-	mSleep(1000);
-
-	char receiveBuffer[bufferSize];
-
-
-	receiveBytes(bufferSize);
-	waitUntilReceptionComplete();
-	copyReceivedBytesToBuffer(&receiveBuffer[0]);
 
 	while(1){
-
+		writeString_P("Ala ma kota\n");
+		mSleep(200);
 	}
 }
